@@ -12,11 +12,15 @@ public static String base_url  ="https://petstore.swagger.io/v2";
      
     
     //Store Model
-    	//Here you can add Store url's
+    public static String storepost_url  = base_url+"/store/order";
+    public static String storeget_url=base_url+"/store/order/{orderId}";
+    public static String storedelete_url=base_url+"/store/order/{orderId}";
     
     
     //Pet Model
-    	//Here you can add Pet url's
+   
+    
+
 
 	
 }

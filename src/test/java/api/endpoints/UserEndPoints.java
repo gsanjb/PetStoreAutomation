@@ -23,7 +23,7 @@ public class UserEndPoints {
 	public static Response readUser(String userName)
 	{
 		Response response = given()
-		  .pathParam("userName", userName)
+		  .pathParam("username", userName)
 		.when()
 		.get(Routes.get_url);
 		
@@ -35,10 +35,10 @@ public class UserEndPoints {
 		Response response = given()
 		   .contentType(ContentType.JSON)
 		   .accept(ContentType.JSON)
-		   .pathParam("username", payload)
+		   .pathParam("username", userName)
 		   .body(payload)
 		.when()
-		.put(Routes.post_url);
+		.put(Routes.update_url);
 		
 		
 		return response;
@@ -46,7 +46,7 @@ public class UserEndPoints {
 	public static Response deleteUser(String userName)
 	{
 		Response response = given()
-		  .pathParam("userName", userName)
+		  .pathParam("username", userName)
 		.when()
 		.delete(Routes.delete_url);
 		
